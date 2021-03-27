@@ -23,7 +23,7 @@ function draw() {
     translate(width / 2, height / 2)
 
     //press ← to see copied the artwork (places by hand)
-    if (keyCode === LEFT_ARROW) {
+
         background(250);
         fill(250, 250, 250)
         strokeWeight(1)
@@ -123,10 +123,10 @@ function draw() {
             }
         }
         pop()
-    }
+    
 
     //press ↓ to see the optimized code artwork
-    else if (keyCode === DOWN_ARROW) {
+if (keyCode === DOWN_ARROW) {
         background(250);
         fill(250, 250, 250)
         strokeWeight(1)
