@@ -7,7 +7,7 @@
 const gui = new dat.GUI()
 const params = {
     Nb_points: 11,
-    Size: 220,
+    Size: 200,
     Download_Image: () => save(),
 }
 gui.add(params, "Nb_points", 0, 50, 1)
@@ -26,6 +26,11 @@ function draw() {
 
         background(250);
         fill(250, 250, 250)
+        textSize(10);
+        let s = 'press your arrows';
+  
+        fill(0, 0, 0);
+        text(s, -200, -200, 300, 100);
         strokeWeight(1)
 
         // premier : 3 sommets
@@ -129,6 +134,8 @@ function draw() {
 if (keyCode === DOWN_ARROW) {
         background(250);
         fill(250, 250, 250)
+        fill(0, 0, 0);
+        text(s, -200, -200, 300, 100);
         strokeWeight(1)
         var valeurs = [19, 17, 13, 11, 7, 5, 3];
         //initialisation du centre
@@ -136,8 +143,8 @@ if (keyCode === DOWN_ARROW) {
         translate(0, 0)
         for (let i = 0; i < valeurs[0]; ++i) {
             for (let j = 0; j < valeurs[0]; ++j) {
-                const pi = p5.Vector.fromAngle((i / valeurs[0]) * TWO_PI).mult(80);
-                const pj = p5.Vector.fromAngle((j / valeurs[0]) * TWO_PI).mult(80);
+                const pi = p5.Vector.fromAngle((i / valeurs[0]) * TWO_PI).mult(70);
+                const pj = p5.Vector.fromAngle((j / valeurs[0]) * TWO_PI).mult(70);
                 line(pi.x, pi.y, pj.x, pj.y)
             }
         }
@@ -151,11 +158,11 @@ if (keyCode === DOWN_ARROW) {
             push()
             angleMode(DEGREES)
             rotate(a * 60)
-            translate(120, 120)
+            translate(100, 100)
             for (let i = 0; i < valeurs[a]; ++i) {
                 for (let j = 0; j < valeurs[a]; ++j) {
-                    const pi = p5.Vector.fromAngle((i / valeurs[a]) * TWO_PI).mult(80);
-                    const pj = p5.Vector.fromAngle((j / valeurs[a]) * TWO_PI).mult(80);
+                    const pi = p5.Vector.fromAngle((i / valeurs[a]) * TWO_PI).mult(70);
+                    const pj = p5.Vector.fromAngle((j / valeurs[a]) * TWO_PI).mult(70);
                     line(pi.x, pi.y, pj.x, pj.y)
                 }
             }
@@ -168,6 +175,8 @@ if (keyCode === DOWN_ARROW) {
     else if (keyCode === UP_ARROW) {
         background(250);
         randomSeed(0)
+        fill(0, 0, 0);
+        text(s, -200, -200, 300, 100);
         for (let i = 0; i < params.Nb_points; ++i) {
             for (let j = 0; j < params.Nb_points; j++) {
                 const pi = p5.Vector.fromAngle((i / params.Nb_points) * TWO_PI).mult(params.Size);
@@ -180,6 +189,8 @@ if (keyCode === DOWN_ARROW) {
     //press → to see the interactive artwork with mouse tracking
     else if (keyCode === RIGHT_ARROW) {
         background(250);
+        fill(0, 0, 0);
+        text(s, -200, -200, 300, 100);
         rotate(-PI / 2)
         randomSeed(0)
         fill(250, 250, 250)

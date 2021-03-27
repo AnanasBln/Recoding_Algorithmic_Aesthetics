@@ -1,7 +1,7 @@
 var gui = new dat.GUI();
 var params = {
     Nb_points: 11,
-    Size: 220,
+    Size: 200,
     Download_Image: function () { return save(); },
 };
 gui.add(params, "Nb_points", 0, 50, 1);
@@ -11,6 +11,10 @@ function draw() {
     translate(width / 2, height / 2);
     background(250);
     fill(250, 250, 250);
+    textSize(10);
+    var s = 'press your arrows';
+    fill(0, 0, 0);
+    text(s, -200, -200, 300, 100);
     strokeWeight(1);
     push();
     translate(-121, -71);
@@ -97,14 +101,16 @@ function draw() {
     if (keyCode === DOWN_ARROW) {
         background(250);
         fill(250, 250, 250);
+        fill(0, 0, 0);
+        text(s, -200, -200, 300, 100);
         strokeWeight(1);
         var valeurs = [19, 17, 13, 11, 7, 5, 3];
         push();
         translate(0, 0);
         for (var i = 0; i < valeurs[0]; ++i) {
             for (var j = 0; j < valeurs[0]; ++j) {
-                var pi = p5.Vector.fromAngle((i / valeurs[0]) * TWO_PI).mult(80);
-                var pj = p5.Vector.fromAngle((j / valeurs[0]) * TWO_PI).mult(80);
+                var pi = p5.Vector.fromAngle((i / valeurs[0]) * TWO_PI).mult(70);
+                var pj = p5.Vector.fromAngle((j / valeurs[0]) * TWO_PI).mult(70);
                 line(pi.x, pi.y, pj.x, pj.y);
             }
         }
@@ -117,11 +123,11 @@ function draw() {
             push();
             angleMode(DEGREES);
             rotate(a * 60);
-            translate(120, 120);
+            translate(100, 100);
             for (var i = 0; i < valeurs[a]; ++i) {
                 for (var j = 0; j < valeurs[a]; ++j) {
-                    var pi = p5.Vector.fromAngle((i / valeurs[a]) * TWO_PI).mult(80);
-                    var pj = p5.Vector.fromAngle((j / valeurs[a]) * TWO_PI).mult(80);
+                    var pi = p5.Vector.fromAngle((i / valeurs[a]) * TWO_PI).mult(70);
+                    var pj = p5.Vector.fromAngle((j / valeurs[a]) * TWO_PI).mult(70);
                     line(pi.x, pi.y, pj.x, pj.y);
                 }
             }
@@ -132,6 +138,8 @@ function draw() {
     else if (keyCode === UP_ARROW) {
         background(250);
         randomSeed(0);
+        fill(0, 0, 0);
+        text(s, -200, -200, 300, 100);
         for (var i = 0; i < params.Nb_points; ++i) {
             for (var j = 0; j < params.Nb_points; j++) {
                 var pi = p5.Vector.fromAngle((i / params.Nb_points) * TWO_PI).mult(params.Size);
@@ -142,6 +150,8 @@ function draw() {
     }
     else if (keyCode === RIGHT_ARROW) {
         background(250);
+        fill(0, 0, 0);
+        text(s, -200, -200, 300, 100);
         rotate(-PI / 2);
         randomSeed(0);
         fill(250, 250, 250);
