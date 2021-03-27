@@ -1,3 +1,5 @@
+To see the 4 versions of coding page, press ←, ↓, ↑ or → arrow.
+
 # p5 template project
 
 Forked from [https://github.com/Gaweph/p5-typescript-starter](https://github.com/Gaweph/p5-typescript-starter)
