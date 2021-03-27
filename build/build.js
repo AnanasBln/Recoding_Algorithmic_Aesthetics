@@ -9,94 +9,92 @@ gui.add(params, "Size", 20, 220, 10);
 gui.add(params, "Download_Image");
 function draw() {
     translate(width / 2, height / 2);
-    if (keyCode === LEFT_ARROW) {
-        background(250);
-        fill(250, 250, 250);
-        strokeWeight(1);
-        push();
-        translate(-121, -71);
-        angleMode(DEGREES);
-        rotate(30);
-        for (var i = 0; i < 3; ++i) {
-            for (var j = 0; j < 3; j++) {
-                var pi = p5.Vector.fromAngle((i / 3) * TWO_PI).mult(70);
-                var pj = p5.Vector.fromAngle((j / 3) * TWO_PI).mult(70);
-                line(pi.x, pi.y, pj.x, pj.y);
-            }
+    background(250);
+    fill(250, 250, 250);
+    strokeWeight(1);
+    push();
+    translate(-121, -71);
+    angleMode(DEGREES);
+    rotate(30);
+    for (var i = 0; i < 3; ++i) {
+        for (var j = 0; j < 3; j++) {
+            var pi = p5.Vector.fromAngle((i / 3) * TWO_PI).mult(70);
+            var pj = p5.Vector.fromAngle((j / 3) * TWO_PI).mult(70);
+            line(pi.x, pi.y, pj.x, pj.y);
         }
-        pop();
-        push();
-        translate(-121, +71);
-        angleMode(DEGREES);
-        rotate(-18);
-        for (var i = 0; i < 5; ++i) {
-            for (var j = 0; j < 5; j++) {
-                var pi = p5.Vector.fromAngle((i / 5) * TWO_PI).mult(70);
-                var pj = p5.Vector.fromAngle((j / 5) * TWO_PI).mult(70);
-                line(pi.x, pi.y, pj.x, pj.y);
-            }
-        }
-        pop();
-        push();
-        translate(0, 142);
-        angleMode(DEGREES);
-        rotate(15);
-        for (var i = 0; i < 7; ++i) {
-            for (var j = 0; j < 7; j++) {
-                var pi = p5.Vector.fromAngle((i / 7) * TWO_PI).mult(70);
-                var pj = p5.Vector.fromAngle((j / 7) * TWO_PI).mult(70);
-                line(pi.x, pi.y, pj.x, pj.y);
-            }
-        }
-        pop();
-        push();
-        translate(+121, +71);
-        angleMode(DEGREES);
-        rotate(5);
-        for (var i = 0; i < 11; ++i) {
-            for (var j = 0; j < 11; j++) {
-                var pi = p5.Vector.fromAngle((i / 11) * TWO_PI).mult(70);
-                var pj = p5.Vector.fromAngle((j / 11) * TWO_PI).mult(70);
-                line(pi.x, pi.y, pj.x, pj.y);
-            }
-        }
-        pop();
-        push();
-        translate(+121, -71);
-        angleMode(DEGREES);
-        rotate(-7);
-        for (var i = 0; i < 13; ++i) {
-            for (var j = 0; j < 13; j++) {
-                var pi = p5.Vector.fromAngle((i / 13) * TWO_PI).mult(70);
-                var pj = p5.Vector.fromAngle((j / 13) * TWO_PI).mult(70);
-                line(pi.x, pi.y, pj.x, pj.y);
-            }
-        }
-        pop();
-        push();
-        translate(0, -142);
-        angleMode(DEGREES);
-        rotate(-5);
-        for (var i = 0; i < 17; ++i) {
-            for (var j = 0; j < 17; j++) {
-                var pi = p5.Vector.fromAngle((i / 17) * TWO_PI).mult(70);
-                var pj = p5.Vector.fromAngle((j / 17) * TWO_PI).mult(70);
-                line(pi.x, pi.y, pj.x, pj.y);
-            }
-        }
-        pop();
-        push();
-        translate(0, 0);
-        for (var i = 0; i < 19; ++i) {
-            for (var j = 0; j < 19; j++) {
-                var pi = p5.Vector.fromAngle((i / 19) * TWO_PI).mult(70);
-                var pj = p5.Vector.fromAngle((j / 19) * TWO_PI).mult(70);
-                line(pi.x, pi.y, pj.x, pj.y);
-            }
-        }
-        pop();
     }
-    else if (keyCode === DOWN_ARROW) {
+    pop();
+    push();
+    translate(-121, +71);
+    angleMode(DEGREES);
+    rotate(-18);
+    for (var i = 0; i < 5; ++i) {
+        for (var j = 0; j < 5; j++) {
+            var pi = p5.Vector.fromAngle((i / 5) * TWO_PI).mult(70);
+            var pj = p5.Vector.fromAngle((j / 5) * TWO_PI).mult(70);
+            line(pi.x, pi.y, pj.x, pj.y);
+        }
+    }
+    pop();
+    push();
+    translate(0, 142);
+    angleMode(DEGREES);
+    rotate(15);
+    for (var i = 0; i < 7; ++i) {
+        for (var j = 0; j < 7; j++) {
+            var pi = p5.Vector.fromAngle((i / 7) * TWO_PI).mult(70);
+            var pj = p5.Vector.fromAngle((j / 7) * TWO_PI).mult(70);
+            line(pi.x, pi.y, pj.x, pj.y);
+        }
+    }
+    pop();
+    push();
+    translate(+121, +71);
+    angleMode(DEGREES);
+    rotate(5);
+    for (var i = 0; i < 11; ++i) {
+        for (var j = 0; j < 11; j++) {
+            var pi = p5.Vector.fromAngle((i / 11) * TWO_PI).mult(70);
+            var pj = p5.Vector.fromAngle((j / 11) * TWO_PI).mult(70);
+            line(pi.x, pi.y, pj.x, pj.y);
+        }
+    }
+    pop();
+    push();
+    translate(+121, -71);
+    angleMode(DEGREES);
+    rotate(-7);
+    for (var i = 0; i < 13; ++i) {
+        for (var j = 0; j < 13; j++) {
+            var pi = p5.Vector.fromAngle((i / 13) * TWO_PI).mult(70);
+            var pj = p5.Vector.fromAngle((j / 13) * TWO_PI).mult(70);
+            line(pi.x, pi.y, pj.x, pj.y);
+        }
+    }
+    pop();
+    push();
+    translate(0, -142);
+    angleMode(DEGREES);
+    rotate(-5);
+    for (var i = 0; i < 17; ++i) {
+        for (var j = 0; j < 17; j++) {
+            var pi = p5.Vector.fromAngle((i / 17) * TWO_PI).mult(70);
+            var pj = p5.Vector.fromAngle((j / 17) * TWO_PI).mult(70);
+            line(pi.x, pi.y, pj.x, pj.y);
+        }
+    }
+    pop();
+    push();
+    translate(0, 0);
+    for (var i = 0; i < 19; ++i) {
+        for (var j = 0; j < 19; j++) {
+            var pi = p5.Vector.fromAngle((i / 19) * TWO_PI).mult(70);
+            var pj = p5.Vector.fromAngle((j / 19) * TWO_PI).mult(70);
+            line(pi.x, pi.y, pj.x, pj.y);
+        }
+    }
+    pop();
+    if (keyCode === DOWN_ARROW) {
         background(250);
         fill(250, 250, 250);
         strokeWeight(1);
